@@ -1,0 +1,29 @@
+#modal{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffacdd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* padding: 20px; */
+    z-index: 1000;
+}
+
+#modalHead {
+    background-color: #fa66bc;
+    margin: 0%;
+    height: 1.2cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 1cm;
+    background-color: #ffacdd;
+    border: 0;
+    padding: 0 10px;
+    
+}
