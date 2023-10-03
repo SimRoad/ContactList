@@ -12,9 +12,9 @@ const PopUp = () => {
     return (
       <div>
         <button onClick={handleButtonClick} id='addButton'>+</button>
-        {buttonClicked && <ModalForm />}
+        {buttonClicked && <ModalForm toggle={setButtonClicked} />}
       </div>
     );
-  };
+};
 
 export default PopUp

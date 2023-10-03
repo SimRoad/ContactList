@@ -1,6 +1,6 @@
 import './App.css'
 import './components/popUp.jsx'
-import Table from './Table/Table.jsx'
+import Table from './components/Table.jsx'
 import PopUp from './components/popUp.jsx'
 
 function Body() {

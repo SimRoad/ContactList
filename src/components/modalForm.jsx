@@ -1,6 +1,6 @@
 import './modal.css'
 
-const ModalForm = () => {
+const ModalForm = ({toggle}) => {
     function addContact(E){
         E.preventDefault()
         fetch('http://localhost/ContactListPHP/src/php/add.php', {
@@ -8,14 +8,14 @@ const ModalForm = () => {
             headers: new Headers({"Content-Type": "application/x-www-form-urlencoded"}),
             body: "fname="+ E.target[1].value +"&lname="+ E.target[0].value +"&emailAdd=" + E.target[2].value + "&contactNum=" + E.target[3].value
         })
-        
+        .then(()=>toggle(false))
     }
 
     return(
         <div id="modal">
             <div id="modalHead">
                 <h3>Test</h3>
-                <button>X</button>
+                <button onClick={()=>toggle(false)}>X</button>
             </div>
             <form id="modalForm" onSubmit={(E)=>addContact(E)}>
                 <input required maxLength="50" name="lname" id="lname" placeholder="Last name" className="inputFields"/><br />
