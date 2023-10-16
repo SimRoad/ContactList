@@ -1,0 +1,53 @@
+.inputFields{
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+#transparentGrayBG{
+    position: absolute; 
+    width: inherit; 
+    height: inherit; 
+    background-color: #000000; 
+    opacity: 0.5; 
+}
+
+#modal{
+    position: relative; 
+    background-color: white; 
+    width: 50%; 
+    height: 50%; 
+    left: 25%; 
+    top: 25%;
+}
+
+.actionButtons{
+    color: white; 
+    width: 100%;
+}
+
+
+body {
+    margin: 0;
+}
+
+#contactList {
+    position: absolute;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+}
+
+table {
+    border: 1px solid black;
+}
+
+button {
+    float: right;
+    font-size: 16px;
+}

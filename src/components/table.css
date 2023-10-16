@@ -1,0 +1,105 @@
+/* Table Styles */
+table {
+    width: 95%;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 15px;
+    background-color: burlywood;
+    padding: 12px 10px 1.5cm;
+}
+
+thead>tr>th {
+    background-color: rgb(243, 243, 141);
+    border-bottom: 3px black solid;
+    /* box-shadow: 3px 0px 10px black; */
+    text-align: center;
+    height: 1.5cm;
+    font-size: larger;
+    color: black;
+}
+
+#lastRow>td{
+    border-bottom: 0;
+    height: 20px;
+}
+
+tbody>tr>td {
+    background-color: rgb(248, 248, 181);
+    border-bottom: 3px rgba(48, 48, 255, 0.692) solid;
+    margin: 0%;
+    min-height: 1.1cm;
+    font-size: large;
+}
+
+td, th{
+    border-right: 3px solid black;
+}
+
+/* Column-Specific Styles */
+.idCol {
+    min-width: 1cm;
+    text-align: center;
+}
+
+
+
+.surCol, .firstCol, .eCol, .phoneCol, .modCol {
+    padding: 0 8px;
+}
+
+.surCol {
+    width: 20%;
+} 
+
+.firstCol {
+    min-width: min-content;
+    max-width: 35%;
+} 
+
+.eCol {
+    min-width: 5cm;
+    max-width: 20%;
+}
+
+.phoneCol {
+    width: 3.5cm;
+    text-align: center;
+}
+
+.modCol {
+    text-align: center;
+    min-width: 3cm;
+}
+
+#modCell {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Button Styles */
+.modButton {
+    width: 40%;
+    border-radius: 5px;
+    margin-top: 3%;
+    height: 0.8cm;
+}
+
+.modButton:hover {
+    box-shadow: inset 2px 2px 10px black;
+}
+
+#editButton {
+    background-color: rgb(0, 255, 64);
+}
+
+#delButton {
+    background-color: rgb(255, 0, 0);
+}
+
+input {
+    border: 0;
+    width: 100%;
+}
+
+input:enabled {
+    color: rgba(180, 180, 180, 0.726);
+}

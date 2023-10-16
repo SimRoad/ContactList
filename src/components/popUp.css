@@ -1,17 +1,15 @@
 #addButton{
-    width: 0.8cm;
-    height: 0.8cm;
-    padding: 0%;
-    border-radius: 50%;
-    background-color: black;
-    color: white;
-    border: 1px black solid;
+    margin-bottom: 5px;
+    border-radius: 1cm;
+    background-color: red;
+    border: 5px double rgb(192, 0, 0);
+    height: 0.9cm;
+    width: 0.9cm;
+    color: #2a2c30;
 }
 
 #addButton:hover{
-    background-color: rgb(245, 209, 6);
-    color: black;
-    border: 0;
-    box-shadow: inset 5px 20px 10px black;
-
+    background-color: red;
+    border: double rgb(133, 0, 0);
+    box-shadow: 2px 2px 10px black;
 }

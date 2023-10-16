@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import '../Table/table.css'
+import './table.css'
+import EditableRow from './row'
 import ModalForm from './modalForm.jsx'; 
 
 function Table() {
   const [data, setData] = useState({});
+
 
 useEffect(() => {
   fetch('http://localhost/ContactListPHP/src/php/read.php')
@@ -16,13 +18,6 @@ useEffect(() => {
     });
 });
 
-function delContact(id) {
-  fetch('http://localhost/ContactListPHP/src/php/delete.php', {
-    method: "POST",
-    headers: new Headers({"Content-Type": "application/x-www-form-urlencoded"}),
-    body: "id="+id
-  })
-}
 
 return (
   <table>
@@ -38,17 +33,7 @@ return (
     </thead>
     <tbody>
       {Object.keys(data).map(contact => (
-        <tr key={data[contact].id}>
-          <td className='idCol'>{data[contact].id}</td>
-          {/* <td className='surCol'>{data[contact].lastName}</td>
-          <td className='firstCol'>{data[contact].firstName}</td>
-          <td className='eCol'>{data[contact].email}</td>
-          <td className='phoneCol'>{data[contact].number}</td>
-          <td className='modCol' id="modCell"> */}
-          <td className='modCol' id="modCell">
-            <button className='modButton' id='editButton'>Edit</button> 
-            <button onClick={()=>delContact(data[contact].id)} className='modButton' id='delButton'>Del</button></td>
-        </tr>
+        <EditableRow data={data[contact]} />
       ))}
       <tr id="lastRow">
         <td className='idCol'> </td>
@@ -64,14 +49,3 @@ return (
 }
 
 export default Table;
-
-function EditableRow(){
-  return(
-    <>
-    <td className='surCol'><input type="text" value={data[contact].lastName} disabled /></td>
-    <td className='firstCol'><input type="text" value={data[contact].firstName} disabled /></td>
-    <td className='eCol'><input type="text" value={data[contact].email} disabled /></td>
-    <td className='phoneCol'><input type="text" value={data[contact].number} disabled /></td>
-    </>
-  )
-}

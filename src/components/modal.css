@@ -5,25 +5,68 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffacdd;
+    background-color: #f5a768;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* padding: 20px; */
     z-index: 1000;
 }
 
 #modalHead {
-    background-color: #fa66bc;
+    background-color: #F88626;
     margin: 0%;
     height: 1.2cm;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0% 1.5cm;
 }
 
-input {
-    height: 1cm;
-    background-color: #ffacdd;
-    border: 0;
-    padding: 0 10px;
+#ripPin {
+    display: flex;
+    justify-content: center;
     
+}
+    
+
+#closeModal {
+    background-color: #FA66BC;
+    border: 5px outset #f197cc;
+    margin-left: 5px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+#closeModal:hover {
+    background-color: #fd52b6;
+    border: 5px outset #ec80bf;
+}
+
+form>input {
+    height: 1cm;
+    background-color: #f5a768;
+    border: 0;
+    width: 95%;
+    margin-bottom: 5px;
+} 
+
+form>input:enabled {
+    color: rgb(75, 75, 75);
+} 
+
+input:disabled {
+    background-color: rgb(248, 248, 181);
+} 
+
+#btnName {
+    margin-bottom: 5px;
+    border-radius: 1cm;
+    background-color: greenyellow;
+    border: 5px double rgb(112, 155, 47);
+    height: 0.9cm;
+    width: 0.9cm;
+}
+
+#btnName:hover {
+    background-color: greenyellow;
+    border: 3px double rgb(68, 94, 28);
+    box-shadow: 2px 2px 5px black;
 }

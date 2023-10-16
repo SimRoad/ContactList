@@ -1,5 +1,4 @@
 import './App.css'
-import './components/popUp.jsx'
 import Table from './components/Table.jsx'
 import PopUp from './components/popUp.jsx'
 
@@ -9,7 +8,7 @@ function Body() {
     <>
     <div id='header'>
       <div id='title'>
-        <h1>Contact List</h1>
+        <h1>Contact Clipboard</h1>
         <PopUp />
       </div>
     </div>
